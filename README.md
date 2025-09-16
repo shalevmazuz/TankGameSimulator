@@ -6,9 +6,9 @@ The simulator supports both **competition mode** and **comparative mode**, with 
 ## Implementation Details
 - `Simulator.cpp` – Main entry point, handles arguments, multi-threading and execution.
 The simulator loads game boards and dynamically registers algorithm and game manager shared libraries, then runs games according to the selected mode. In competition mode it schedules all algorithm pairs across all maps (optionally using multiple threads), while in comparative mode it runs the same map and algorithms under different game managers, collecting and outputting the results.
-- `GameManager_318885712_208230862.cpp` – The game manager controls the simulation by applying tank actions, moving shells, and resolving collisions with walls, mines, or other tanks.
+- `GameManager_A.cpp` – The game manager controls the simulation by applying tank actions, moving shells, and resolving collisions with walls, mines, or other tanks.
 It enforces the game rules, tracks win conditions, and logs the sequence of actions until the match ends.
-- `TankAlgorithm_318885712_208230862.cpp` - Our tank algorithm combines shooting and danger avoidance with pathfinding using BFS to reach the nearest enemy tank.
+- `TankAlgorithm_A.cpp` - Our tank algorithm combines shooting and danger avoidance with pathfinding using BFS to reach the nearest enemy tank.
 It dynamically updates battlefield information, avoids mines and shells, shoots when possible, and adapts its movement accordingly.
 
 
